@@ -5,3 +5,7 @@ p {
 .destacado {
     background-color: lightyellow;
 }
+
+#experiencia {
+    border: red dotted 2px;
+}
