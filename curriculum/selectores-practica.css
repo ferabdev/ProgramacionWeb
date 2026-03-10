@@ -29,3 +29,12 @@ h2 + p {
 h2 ~ p {
     color: lightgray;
 }
+
+.intro p {
+    border-left: orange solid 5px;
+}
+
+#contacto a[target="_blank"] {
+    color: green;
+    text-decoration: none;
+}
