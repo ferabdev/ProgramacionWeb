@@ -21,3 +21,7 @@ ul#experiencia > li {
 a[target="_blank"]::after {
     content: "🔗";
 }
+
+h2 + p {
+    margin-top: 0;
+}
