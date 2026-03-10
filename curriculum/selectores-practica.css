@@ -9,3 +9,7 @@ p {
 #experiencia {
     border: red dotted 2px;
 }
+
+a[target="_blank"]::after {
+    content: "🔗";
+}
