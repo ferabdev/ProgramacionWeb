@@ -10,6 +10,10 @@ p {
     border: red dotted 2px;
 }
 
+#experiencia p {
+    font-size: 0.9em;
+}
+
 a[target="_blank"]::after {
     content: "🔗";
 }
