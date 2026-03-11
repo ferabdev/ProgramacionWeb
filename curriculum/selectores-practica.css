@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 p {
     color: blue;
 }
@@ -6,15 +10,15 @@ p {
     background-color: lightyellow;
 }
 
-#experiencia {
+.experiencia {
     border: red dotted 2px;
 }
 
-#experiencia p {
+.experiencia p {
     font-size: 0.9em;
 }
 
-ul#experiencia > li {
+ul.experiencia > li {
     list-style-type: square;
 }
 
@@ -34,7 +38,7 @@ h2 ~ p {
     border-left: orange solid 5px;
 }
 
-#contacto a[target="_blank"] {
+.contacto a[target="_blank"] {
     color: green;
     text-decoration: none;
 }
