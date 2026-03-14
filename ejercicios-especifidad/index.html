@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Especificidad en CSS</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Fernando Abimael Pérez Rosales - 8A</h1>
+
+    <div id="contenedor">
+        <p class="texto" id="parrafo">Texto 1</p>
+        <p class="texto">Texto 2</p>
+    </div>
+    <p class="texto">Texto 3</p>
+    <ol>
+        <li>
+            ¿De que color se ve cada parrafo?<br>
+            Los 2 primeros de morado, y el ultimo es azul
+        </li>
+        <li>
+            Calcula la Especificidad de cada regla <br>
+            De los 2 primeros es 1, 1, 0 (Porque se espcifica un id y una clase)<br>
+            Para el tercero simplemente es 0, 1, 0 (Solo se especifica la clase)
+        </li>
+        <li>
+            Explica porque se aplica cada color <br>
+            En el primero se aplican las 5 declaraciones, pero termina ganando la morada ya que su Especificidad es
+            mayor<br>
+            En el segundo se aplican casi las 5 declaraciones a excepcion de #parrafo ya que no es su id, pero termina
+            ganando la morada ya que su Especificidad es mayor tambien<br>
+            Para el tercero simplemente azul porque tiene mas fuerza especificar una clase que un elemento
+        </li>
+    </ol>
+
+    <hr>
+
+    <ul>
+        <li class="item" id="primero">Elemento 1</li>
+        <li class="item">Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <ol>
+        <li>
+            Colores resultantes para cada <code>li</code><br>
+            El primero esa fuchsia, el segundo será teal y el tercero gris
+        </li>
+        <li>
+            Cual es la Especificidad de la regla 5? <br>
+            1, 1, 1
+        </li>
+        <li>
+            ¿Qué ocurre si se intercambia el orden de las reglas 4 y 5? <br>
+            Nada, porque sigue teniendo mas Especificidad la fuchsia, ademas de que la siguiente con mas Especificidad
+            es en navy porque incluye id
+        </li>
+    </ol>
+
+    <hr>
+
+    <section id="main">
+        <div class="caja">
+            <p>Texto A</p>
+            <p class="resaltado">Texto B</p>
+        </div>
+        <p class="resaltado">Texto C</p>
+    </section>
+
+    <ol>
+        <li>
+            Determina el color de cada parrafo<br>
+            Lima, indigo y indigo
+        </li>
+        <li>
+            Identifica que reglas tienen la misma Especificidad y como se resuelve <br>
+            Pues la regla que es solo a la p con una regla igual en el ejercicio 1, se podria poner el id del main antes
+            de la p
+            ya que en este caso todos los p estan dentro de #main
+        </li>
+    </ol>
+
+    <hr>
+    <article>
+        <h2 class="titulo">Título</h2>
+        <p class="contenido">Párrafo 1</p>
+        <p class="contenido" id="ultimo">Párrafo 2</p>
+    </article>
+
+    <ol>
+        <li>
+            Colores de cada elemento<br>
+            Negro, darkcyan y darkgoldenrod
+        </li>
+        <li>
+            Que regla se aplica con id "ultimo"?¿Por qué? <br>
+            Primero el color crimson pero como solo es Especificidad 1, 0, 0 le gana el darkgoldenrod que tiene 1, 1, 1
+        </li>
+        <li>
+            Si se añade !important a la regla 2 ¿Cambia algo? ¿Por qué?<br>
+            Si, porque el !important está por encima de cualquier Especificidad
+        </li>
+    </ol>
+
+
+    <hr>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" class="enlace">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#" id="contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <ol>
+        <li>
+            Colores de cada enlace<br>
+            darkred, darkgreen y darkorange
+        </li>
+        <li>
+            Calcula la Especificidad de la regla 5 <br>
+            0, 2, 2
+        </li>
+        <li>
+            ¿Que enlace se ve afectado por la regla 4? ¿Por qué?<br>
+            El ultimo porque es el unico con id
+        </li>
+    </ol>
+
+    <hr>
+    <div id="padre">
+        <div class="hijo">
+            <p class="nieto">Texto X</p>
+        </div>
+        <p class="hijo">Texto Y</p>
+    </div>
+
+    <ol>
+        <li>
+            Colores del "Texto X" y "Texto Y"<br>
+            darkturquoise y darkslategray
+        </li>
+        <li>
+            Explica la diferencia entre las reglas 3 y 4<br>
+            Que la tercera aplica a todos los .hijo dentro de #padre pero la 4ta aplica solo a los hijos directamente
+            dentro de #padre, osea que si hay un contenedor dentro de #padre y luego un .hijo adentro, ahi no afectaria
+            mas que la regla 3
+        </li>
+        <li>
+            Cual es la especificidad de la regla 5?<br>
+            1, 2, 0
+        </li>
+    </ol>
+    <hr>
+    <form id="registro">
+        <input type="text" name="usuario" class="campo">
+        <input type="password" name="clave" class="campo">
+        <input type="submit" value="Enviar" id="btn">
+    </form>
+
+    <ol>
+        <li>
+            Que grosor y que color de borde tiene cada input?<br>
+            Verde de 3px
+        </li>
+        <li>
+            Ordena las reglas por especificidad de menor a mayor<br>
+            Regla 1, Regla 2, Regla 4, Regla 5 y Regla 3
+        </li>
+        <li>
+            Que pasa si se añade !important a la regla 1?<br>
+            Se aplicaria a todos, porque todos son input y el !important tiene mayor prioridad
+        </li>
+    </ol>
+    <hr>
+    <div class="card" id="card1">
+        <h3 class="card-title">Titulo 1</h3>
+        <p class="card-text">Texto 1</p>
+    </div>
+    <div class="card" id="card2">
+        <h3 class="card-title">Titulo 2</h3>
+        <p class="card-text">Texto</p>
+    </div>
+
+    <ol>
+        <li>
+            Colores de titulos y textos en cada card<br>
+            Titulo 1 mediumvioletred, texto 1 midnightblue,
+            Titulo 2 mediumvioletred, texto 2 mediumblue
+        </li>
+        <li>
+            Qué reglas tienen la misma especificidad? ¿Como se resuelve?<br>
+            la 2 con la 3, y la 4 con la 5. En estos casos no se aplican a los mismos elementos y solo tienen la misma
+            especificidad,
+            si aplicaran al mismo elemento solo tomaria la ultima
+        </li>
+        <li>
+            Si se añade un estilo en linea al titulo de card1 con color orange, que ocurre?<br>
+            Se aplicaria el color naranja porque los estilos en linea tienen prioridad
+        </li>
+    </ol>
+
+    <hr>
+    <main>
+        <section class="seccion" id="s1">
+            <p>Párrafo 1</p>
+            <p class="especial">Párrafo 2</p>
+        </section>
+        <section class="seccion">
+            <p>Párrafo 3</p>
+        </section>
+    </main>
+
+    <ol>
+        <li>
+            Colores de cada parrafo<br>
+            palegreen, paleturquoise, palegreen
+        </li>
+        <li>
+            ¿Qué regla se aplica al párrafo con clase "especial" dentro de #s1?<br>
+            El color de texto orchid
+        </li>
+        <li>
+            ¿Cuál es la especificidad de la regla 6?<br>
+            0, 2, 1
+        </li>
+    </ol>
+
+    <hr>
+    <div class="contenedor" id="contenedor">
+        <p>Párrafo A</p>
+        <div class="interno">
+            <p class="destacado">Párrafo B</p>
+        </div>
+        <p class="destacado">Párrafo C</p>
+    </div>
+    <ol>
+        <li>
+            Colores de "Párrafo A", "Párrafo B" y "Párrafo C"<br>
+            plum, rosybrown y powderblue
+        </li>
+        <li>
+            Explica por qué "Párrafo B" no toma el color de la regla 6 si tiene clase destacado y está dentro de .interno.<br>
+            Si lo aplica, es el que tiene más especificidad con 1 id y 2 de clase
+        </li>
+        <li>
+            ¿Qué regla tiene mayor especificidad? Ordénalas de mayor a menor<br>
+            6, 4, 3, 5, 2, 1
+        </li>
+    </ol>
+</body>
+
+</html>
