@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+h1 {
+    text-align: center,
+}
+
+.contenedor {
+    width: 906px;
+    margin: auto;
+    border: 3px solid black;
+    background: white;
+    display: flex;
+}
+
+.card {
+    width: 33.33%;
+    padding: 60px;
+    border: 15px solid steelblue;
+    float: left;
+    background: #e6f2ff;
+    outline: 3px dashed red;
+}
+
+button {
+    padding: 10px;
+}
