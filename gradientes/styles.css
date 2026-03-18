@@ -1,5 +1,5 @@
 body {
-    background: conic-gradient(from 90deg, purple, peru, crimson, blue);
+    background: conic-gradient(from 20deg, purple, peru, crimson, blue);
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
@@ -13,7 +13,7 @@ header {
 }
 
 .caja {
-    background: linear-gradient(to right, #879789, #feb47b);
+    background: linear-gradient(to left, #879789, #feb47b);
     padding: 20px;
     margin-top: 10px;
 }
