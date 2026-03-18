@@ -41,6 +41,10 @@ header {
     cursor: pointer;
 }
 
+.btn:hover {
+    background: linear-gradient(to right, #ff4b2b, #2cb463);
+}
+
 /* 5. Texto gradiente */
 .texto-gradiente {
     background: linear-gradient(45deg, #fe2, #f90);
