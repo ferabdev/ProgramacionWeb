@@ -1,5 +1,9 @@
 body {
-    background: conic-gradient(from 20deg, purple, peru, crimson, blue);
+    background:
+        radial-gradient(circle at 20% 30%, red 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, blue 0%, transparent 50%),
+        radial-gradient(circle at 0% 50%, green 0%, transparent 60%),
+        black;
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
