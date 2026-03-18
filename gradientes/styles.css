@@ -110,4 +110,11 @@ tr.highlight {
     border: 5px solid;
     border-image: linear-gradient(45deg, yellow, blue) 1;
     padding: 20px;
+    animation: animarBorde 2s linear infinite;
+}
+
+@keyframes animarBorde {
+  0%   { border-image: linear-gradient(45deg, yellow, blue) 1 }
+  50% { border-image: linear-gradient(45deg, blue, yellow) 1 }
+  100%   { border-image: linear-gradient(45deg, yellow, blue) 1 }
 }
