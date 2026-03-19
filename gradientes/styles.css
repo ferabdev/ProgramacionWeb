@@ -63,6 +63,11 @@ header {
     color: transparent;
 }
 
+.texto-gradiente span {
+    background: linear-gradient(to right, blue, red);
+    background-clip: text;
+}
+
 /* 6. Imagen overlay */
 .img-container {
     position: relative;
