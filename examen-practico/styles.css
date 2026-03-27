@@ -1,0 +1,68 @@
+/* 
+    Los colores mejor tomé unos colores pastel de una paleta de colores en linea https://colorhunt.co/palette/adb2d4c7d9ddd5e5d5eef1da
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: #ADB2D4;
+}
+
+tbody th {
+    background-color: #C7D9DD;
+}
+
+tr {
+    min-height: 21px;
+    height: 21px;
+}
+
+table tbody td.bg-blanco {
+    background-color: white;
+}
+
+th, td {
+    border: 1px black solid;
+}
+
+tbody td:first-child {
+    background-color: #EEF1DA;
+}
+
+/* Para el caso donde sale la fila que ocupa 5 filas */
+.oe, .oe + td {
+    background-color: #D5E5D5!important;
+}
+
+tbody td:not(:first-child) {
+    background-color: #D5E5D5;
+}
+
+thead th:first-child, thead th:last-child {
+    width: 50%;
+}
