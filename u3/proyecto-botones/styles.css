@@ -1,0 +1,24 @@
+.btn {
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding: 12px;
+    min-width: 100px;
+    border: 0px;
+    border-radius: 8px;
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+    background: #3498db;
+    color: #ffffff;
+}
+
+.btn:hover {
+  background: #2980b9;
+  color: #ffffff;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
